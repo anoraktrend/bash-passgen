@@ -1,8 +1,17 @@
 #!/bin/sh
 while [ $# -gt 0 ]; do
         case "${1}" in
-                header|-h)
-                        cat header
+                help|-h)
+                        echo "+++++++++++++++++++++++++++++++++++++++++++++++++++++"
+                        echo "Simple POSIX shell password generator using urandom."
+                        echo "Generates 100 passwords and dumps them in ~/password." 
+                        echo "Thanks to Ella-0 for POSIX shell compatiblity &"
+                        echo "NotGrey for the "make passwords overwrite and"
+                        echo "only readable by you and root" command."
+                        echo "Usage"
+                        echo "help or -h   display this message"
+                        echo "locate or -l    locate the script"
+                        echo "====================================================="
                         ;;
                 locate|-l)
                         script=$(dirname "$0")
