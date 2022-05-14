@@ -1,6 +1,3 @@
-#!/bin/bash
-for ((i=1;i<=100;i++))
-do
-echo $(< /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c${1:-32};echo;) >> ~/passwords
-done
-echo "passwords generated"
+#!/bin/sh
+head -c 2400 /dev/urandom | base64 -w 32 >> ~/passwords
+echo 'passwords generated'
