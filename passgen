@@ -1,3 +1,15 @@
 #!/bin/sh
+while [ $# -gt 0 ]; do
+        case "${1}" in
+                header|-h)
+                        cat header
+                        ;;
+                locate|-l)
+                        echo "$PWD"
+                        ;;
+        esac
+        shift
+done
+install -m 600 /dev/null ~/passwords
 head -c 2400 /dev/urandom | base64 -w 32 >> ~/passwords
 echo 'passwords generated'
