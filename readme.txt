@@ -1,4 +1,14 @@
-simple bash password generator using urandom. generates 100 passwords and dumps them in ~/password. PRs welcome to increase shell compatibility.
+      mmmm    mmm    mmm    mmm    mmmm   mmm   m mm  
+     #" "#  "   #  #   "  #   "  #" "#  #"  #  #"  # 
+    #   #  m"""#   """m   """m  #   #  #""""  #   # 
+   ##m#"  "mm"#  "mmm"  "mmm"  "#m"#  "#mm"  #   # 
+  #                            m  #               
+ "                             ""
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Simple POSIX shell password generator using urandom. 
+Generates 100 passwords and dumps them in ~/password. 
+Thanks to Ella-0 for POSIX shell compatiblity.
+=====================================================
 To use: 
  git clone (insert repo here) passgen
 To use without installing
