@@ -27,5 +27,5 @@ To configure
  # (editor of choice) /path/to/passgen
 =====================================================
 passgen currently accepts two arguments: 
-headers or -h   displays header
+help or -h   displays help message
 locate or -l    prints directory where passgen is.
