@@ -8,28 +8,23 @@ while [ $# -gt 0 ]; do
                         echo "Thanks to Ella-0 for POSIX shell compatiblity &"
                         echo "NotGrey for the make ~/passwords overwrite and"
                         echo "only readable by you and root command."
-                        echo "options: -l & -t specify length or charset"
+                        echo "options: -l & -c specify length or charset"
                         echo "Usage"
                         echo "help or -h   display this message"
                         echo "where or -w    display where the script is"
-                        echo "-l{} & -t[] specify {length} or [charset]"
+                        echo "-l{} & -c[] specify {length} or [charset]"
                         echo "====================================================="
                         ;;
                 where|-w)
                         script=$(dirname "$0")
                         echo $script
                         ;;
+                        l) LEN=${OPTARG}     ;;
+	                c) CHARSET=${OPTARG};;
         esac
         shift
 done
 # parse opts
-while getopts "l:c:" opts; do
-	case "$opts" in
-	l) LEN=${OPTARG}     ;;
-	c) CHARSET=${OPTARG};;
-	*) return 1	     ;;
-	esac
-done
 
 if [ -z "$LEN" ]; then
 	LEN=64
