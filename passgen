@@ -8,12 +8,14 @@ while [ $# -gt 0 ]; do
                         echo "Thanks to Ella-0 for POSIX shell compatiblity &"
                         echo "NotGrey for the make ~/passwords overwrite and"
                         echo "only readable by you and root command."
+                        echo "options: -l & -t specify length or charset"
                         echo "Usage"
                         echo "help or -h   display this message"
-                        echo "locate or -l    locate the script"
+                        echo "where or -w    display where the script is"
+                        echo "-l={} & -t=[] specify {length} or [charset]"
                         echo "====================================================="
                         ;;
-                locate|-l)
+                where|-w)
                         script=$(dirname "$0")
                         echo $script
                         ;;
