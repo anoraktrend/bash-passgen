@@ -15,10 +15,12 @@ while [ $# -gt 0 ]; do
                         echo "where or -w    display where the script is"
                         echo "-l{} & -c[] specify {length} or [charset]"
                         echo "====================================================="
+                        exit 0
                         ;;
                 where|-w)
                         script=$(dirname "$0")
                         echo $script
+                        exit 0
                         ;;
                 -l) LEN=${OPTARG}     ;;
 	        -c) CHARSET=${OPTARG};;
