@@ -33,3 +33,6 @@ help or -h     displays help message
 where or -w    prints where passgen is.
 -l=LENGTH      make passwords a certain length
 -c=CHARSET     use a certain character set.
+
+pg from:
+https://github.com/breadtard/ranutils/blob/master/passgen/
