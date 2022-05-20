@@ -35,4 +35,4 @@ where or -w    prints where passgen is.
 -c=CHARSET     use a certain character set.
 
 pg from:
-https://github.com/breadtard/ranutils/blob/master/passgen/
+github.com/breadtard/ranutils/blob/master/passgen/
