@@ -7,7 +7,8 @@ while [ $# -gt 0 ]; do
                         echo "Generates 100 passwords and dumps them in ~/password." 
                         echo "Thanks to Ella-0 for POSIX shell compatiblity &"
                         echo "NotGrey for the make ~/passwords overwrite and"
-                        echo "only readable by you and root command."
+                        echo "only readable by you and root command &"
+                        echo "Breadtard for the options"
                         echo "options: -l & -c specify length or charset"
                         echo "Usage"
                         echo "help or -h   display this message"
@@ -19,8 +20,8 @@ while [ $# -gt 0 ]; do
                         script=$(dirname "$0")
                         echo $script
                         ;;
-                        l) LEN=${OPTARG}     ;;
-	                c) CHARSET=${OPTARG};;
+                -l) LEN=${OPTARG}     ;;
+	        -c) CHARSET=${OPTARG};;
         esac
         shift
 done
@@ -34,4 +35,6 @@ if [ -z "$CHARSET" ]; then
 else
 	echo $(cat /dev/urandom | head | base64) | sed -e "s/ //g" | fold -w1 | grep "[$CHARSET]" | xargs | sed -e "s/ //g" | fold -w$LEN | head -n1
 fi
+LEN=
+CHARSET=
 echo "Passwords Generated"
