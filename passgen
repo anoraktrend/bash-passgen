@@ -24,7 +24,6 @@ while [ $# -gt 0 ]; do
         esac
         shift
 done
-# parse opts
 
 if [ -z "$LEN" ]; then
 	LEN=64
